@@ -1,41 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      :root {
+        --logo-size: 50px;
+      }
+
+      .navbar-logo {
+        height: var(--logo-size);
+        width: auto;
+        border-radius: 5px;
+        margin-right: 15px;
+      }
+
+      .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #198754;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+        z-index: 1000;
+      }
+
+      .back-to-top:hover {
+        background-color: #146c43;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+      }
+
+      .current-page {
+        font-weight: bold !important;
+        background-color: rgba(25, 135, 84, 0.1);
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Colombia</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Mexico</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Brasil</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">España</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Argentina</a>
-        </li>
-      </ul>
+      <div class="container-fluid">
+        <img src="logo_BS.jpg" alt="Bandera de Brasil" class="navbar-logo" />
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="colombia.html">Colombia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mexico.html">Mexico</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active current-page"
+                aria-current="page"
+                href="brasil.html"
+                >Brasil</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="españa.html">España</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Argentina</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="text-center mb-5">🌴Brasil☀️</h1>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <!-- Presentación 1 -->
+        <div class="col-lg-8 col-md-10 mb-4">
+          <div class="card h-100">
+            <img
+              src="guide-brasilia.jpg"
+              class="card-img-top"
+              alt="Brasilia - Capital de Brasil"
+              style="height: 300px; object-fit: cover"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Brasilia - La Capital Planificada</h5>
+              <p class="card-text">
+                Brasilia es la capital federal de Brasil y una de las ciudades
+                planificadas más importantes del mundo. Diseñada por el
+                arquitecto Oscar Niemeyer y el urbanista Lúcio Costa, fue
+                construida en solo cuatro años (1956-1960) para ser la nueva
+                capital del país. Su arquitectura modernista única y su diseño
+                urbano innovador la convirtieron en Patrimonio de la Humanidad
+                por la UNESCO en 1987.
+              </p>
+              <p class="card-text">
+                <small class="text-muted"
+                  >Población: aproximadamente 3.1 millones de habitantes en el
+                  área metropolitana</small
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Cultura -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <img
+              src="carnaval_BS.jpg"
+              class="card-img-top"
+              alt="Carnaval de Brasil"
+              style="height: 200px; object-fit: cover"
+            />
+            <div class="card-body">
+              <h5 class="card-title">🎭 Cultura Brasileña</h5>
+              <p class="card-text">
+                Brasil es famoso mundialmente por su rica diversidad cultural.
+                El Carnaval tiene su origen de las fiestas europeas "Entrudo",
+                antes de la cuaresma. Y con el tiempo tanto las influencias
+                indígenas y africanas se han funcionado con las europeas. El
+                Carnaval de Río, la samba, la bossa nova y la capoeira son solo
+                algunas de las expresiones culturales que han trascendido
+                fronteras; Ya que para estos mismos el carnaval es un momento de
+                catarsis colectiva, para escapar de las preocupaciones de la
+                vida cotidiana.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Geografía -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <img
+              src="geografia_BS.jpeg"
+              class="card-img-top"
+              alt="Geografía de Brasil"
+              style="height: 200px; object-fit: cover"
+            />
+            <div class="card-body">
+              <h5 class="card-title">🌎 Geografía</h5>
+              <p class="card-text">
+                Brasil es el quinto país más grande del mundo, ocupando casi la
+                mitad del territorio sudamericano. Alberga la mayor parte de la
+                selva amazónica, considerada el "pulmón del mundo". Sus paisajes
+                van desde playas tropicales hasta montañas, pantanos y la
+                extensa región del Cerrado.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Economía -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <img
+              src="economia_BS.png"
+              class="card-img-top"
+              alt="Economía de Brasil"
+              style="height: 200px; object-fit: cover"
+            />
+            <div class="card-body">
+              <h5 class="card-title">💼 Economía</h5>
+              <p class="card-text">
+                Brasil tiene la economía más grande de América Latina y es una
+                de las principales economías emergentes del mundo. Es líder
+                mundial en la producción de café, azúcar, soja y carne. También
+                tiene importantes sectores industriales, especialmente en
+                automóviles, petroquímica y tecnología.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Turismo -->
+        <div class="col-lg-6 col-md-12 mb-4">
+          <div class="card h-100">
+            <img
+              src="turismo_BS.jpg"
+              class="card-img-top"
+              alt="Turismo en Brasil"
+              style="height: 200px; object-fit: cover"
+            />
+            <div class="card-body">
+              <h5 class="card-title">🏖️ Destinos Turísticos</h5>
+              <p class="card-text">
+                Brasil ofrece destinos increíbles para todos los gustos: las
+                famosas playas de Copacabana e Ipanema en Río de Janeiro, las
+                históricas ciudades coloniales como Salvador de Bahía, las
+                majestuosas Cataratas del Iguazú, y la oportunidad única de
+                explorar la Amazonía. Cada región ofrece experiencias únicas y
+                memorables.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Datos Curiosos -->
+        <div class="col-lg-6 col-md-12 mb-4">
+          <div class="card h-100">
+            <img
+              src="datos_curi_BS.jpg"
+              class="card-img-top"
+              alt="Datos Curiosos de Brasil"
+              style="height: 200px; object-fit: cover"
+            />
+            <div class="card-body">
+              <h5 class="card-title">🤔 Datos Curiosos</h5>
+              <p class="card-text">
+                🦜 ¿Sabías que Brasil es el único país de América Latina que habla
+                portugués? 
+                <br> 🏯También es hogar de la mayor población japonesa fuera
+                de Japón.
+                <br> 🙏 Tiene el Cristo Redentor como una de las Nuevas Siete Maravillas del Mundo.
+                <br> ☕ Es el mayor productor de café del mundo desde hace más de 150 años. El café es parte esencial de su cultura cotidiana.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</nav>
-</body>
+
+    <button class="back-to-top" id="backToTopBtn" title="Ir al principio">
+      ↑
+    </button>
+
+    <script>
+      // Botón regresar
+      const backToTopBtn = document.getElementById("backToTopBtn");
+
+      window.addEventListener("scroll", function () {
+        if (window.pageYOffset > 300) {
+          backToTopBtn.style.display = "block";
+        } else {
+          backToTopBtn.style.display = "none";
+        }
+      });
+
+      backToTopBtn.addEventListener("click", function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      backToTopBtn.style.display = "none";
+    </script>
+  </body>
 </html>
